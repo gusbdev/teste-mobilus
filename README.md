@@ -104,7 +104,7 @@ Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementada
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev)
+[<img src="https://avatars2.githubusercontent.com/u/44094756?s=460&u=a2a2631e8eb8f5f5cdff75121eb422188a64bb85&v=4" width=115><br><sub>Gustavo Barbosa</sub>](https://github.com/gusbdev)
 
 ## Licença
 
