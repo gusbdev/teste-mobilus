@@ -73,7 +73,7 @@ Liste todas as dependencias e libs que o usuário deve ter instalado na máquina
 No terminal, clone o projeto:
 
 ```
-git clone https://github.com/gusbdev/certificate-generator
+git clone https://github.com/gusbdev/teste-mobilus
 ```
 
 ...
