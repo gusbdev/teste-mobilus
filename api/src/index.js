@@ -5,8 +5,8 @@ const bodyParser = require("body-parser");
 const axios = require("axios");
 const connection = require("./database/database");
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const reportController = require("./controllers/report/ReportController");
 
