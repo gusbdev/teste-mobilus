@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 30,
+    padding: 20,
   },
   calcButton: {
     padding: 10,
@@ -27,5 +27,16 @@ export const styles = StyleSheet.create({
     fontSize: 24,
     maxWidth: 280,
     marginVertical: 40,
+  },
+  titleData: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 20,
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+  space: {
+    marginBottom: 50,
   },
 });

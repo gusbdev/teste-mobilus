@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 
 import {styles} from '../Styles';
+import {allCases} from '../services/cases';
 
 export default function Report() {
+  const [lastMonth, setLastMonth] = useState([]);
+
   return (
     <>
       <View style={styles.containerTitle}>
