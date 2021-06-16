@@ -8,6 +8,7 @@ const Tab = createBottomTabNavigator();
 
 import MovingAvarage from '../src/screens/MovingAvarage';
 import Compare from '../src/screens/Compare';
+import Report from '../src/screens/Report';
 
 export default function Routes() {
   return (
@@ -28,6 +29,15 @@ export default function Routes() {
           options={{
             tabBarIcon: ({focused}) => (
               <Feather focused={focused} name="bar-chart-2" size={28} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Relatório"
+          component={Report}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <Feather focused={focused} name="file-text" size={28} />
             ),
           }}
         />
