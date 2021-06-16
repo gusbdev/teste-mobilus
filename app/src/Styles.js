@@ -10,10 +10,22 @@ export const styles = StyleSheet.create({
   calcButton: {
     padding: 10,
     alignItems: 'center',
-    color: '#fff',
     backgroundColor: '#009fe3',
     width: 150,
     borderRadius: 20,
     marginTop: 20,
+  },
+  buttonText: {
+    color: '#fff',
+  },
+  containerTitle: {
+    backgroundColor: '#009fe3',
+    alignItems: 'center',
+  },
+  mainTitle: {
+    color: '#FFF',
+    fontSize: 24,
+    maxWidth: 280,
+    marginVertical: 40,
   },
 });

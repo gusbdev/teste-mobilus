@@ -5,8 +5,13 @@ import {styles} from '../Styles';
 
 export default function Compare() {
   return (
-    <View style={styles.container}>
-      <Text>Compare</Text>
-    </View>
+    <>
+      <View style={styles.containerTitle}>
+        <Text style={styles.mainTitle}>Comparação</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>Compare</Text>
+      </View>
+    </>
   );
 }

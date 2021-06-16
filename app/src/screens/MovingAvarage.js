@@ -42,13 +42,18 @@ export default function MovingAvarage() {
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>{movingAvarage ? Math.trunc(movingAvarage) : ''}</Text>
-      <TouchableOpacity
-        style={styles.calcButton}
-        onPress={() => calcMovingAvarage()}>
-        <Text>Exibir média móvel</Text>
-      </TouchableOpacity>
-    </View>
+    <>
+      <View style={styles.containerTitle}>
+        <Text style={styles.mainTitle}>Média Móvel</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>{movingAvarage ? Math.trunc(movingAvarage) : ''}</Text>
+        <TouchableOpacity
+          style={styles.calcButton}
+          onPress={() => calcMovingAvarage()}>
+          <Text style={styles.buttonText}>Exibir média móvel</Text>
+        </TouchableOpacity>
+      </View>
+    </>
   );
 }
