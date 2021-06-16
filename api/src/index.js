@@ -1,9 +1,25 @@
 const cors = require("cors");
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
 const axios = require("axios");
+const connection = require("./database/database");
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+const reportController = require("./controllers/report/ReportController");
 
 app.use(cors());
+
+connection
+  .authenticate()
+  .then(() => {
+    console.log("Success");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 app.use("/cases", async (req, res) => {
   const { data } = await axios(
@@ -11,6 +27,8 @@ app.use("/cases", async (req, res) => {
   );
   return res.send(data);
 });
+
+app.use("/", reportController);
 
 app.listen(8080, () => {
   console.log("Running on port 8080");
