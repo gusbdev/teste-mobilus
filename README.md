@@ -66,7 +66,6 @@ git clone https://github.com/gusbdev/teste-mobilus
 Pelo terminal navegue para a pasta app e execute o comando:
 
 ```
-cd app
 yarn install
 ```
 
