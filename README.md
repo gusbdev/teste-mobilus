@@ -16,20 +16,14 @@
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-dash)
-
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-...
-
-Insira os tópicos do README em links para facilitar a navegação do leitor
-
 ## Descrição do projeto
 
 <p align="justify">
-  Descrição breve do projeto compondo um paragrafo ou dois. 
+  Teste para a vaga de desenvolvedor mobile.
 </p>
 
 ## Funcionalidades
@@ -54,19 +48,10 @@ mortes por COVID-19. Ao final, os pontos achados deverão ser gravados (de acord
 mecanismo de persistência de dados solicitado), juntamente com a localização do usuário e a
 data e o horário da consulta.
 
-## Layout ou Deploy da Aplicação :dash:
-
-...
-
-Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
-
 ## Pré-requisitos
 
 :warning: [Node](https://nodejs.org/en/download/)
-
-...
-
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação
+:warning: [React Native CLI](https://reactnative.dev/docs/environment-setup)
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -76,31 +61,78 @@ No terminal, clone o projeto:
 git clone https://github.com/gusbdev/teste-mobilus
 ```
 
-...
+### APP
 
-Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio projeto e verfique se o passo a passo funciona**
+Pelo terminal navegue para a pasta app e execute o comando:
+
+```
+cd app
+yarn install
+```
+
+Isso irá instalar as dependências da aplicação para execução no ambiente de desenvolvimento
+
+Depois, basta executar o comando:
+
+```
+npx react-native run-android
+```
+
+### API
+
+Antes de executar a API, precisa ter um banco de dados MySQL. Pode-se usar o [arquivo SQL](https://github.com/gusbdev/teste-mobilus/blob/main/teste-mobilus.sql) para importar o banco. Também é possível somente criar um banco com o nome de "_teste-mobilus_" e executar a API. Após isso, a criação da tabela e das colunas será criada de forma automática, graças ao ORM Sequelize.
+
+No terminal, navegue para a basta **api** e execute o comando:
+
+```
+yarn install
+```
+
+Isso irá instalar as dependências da aplicação para execução no ambiente de desenvolvimento
+
+Depois, execute o comando:
+
+```
+yarn start
+```
+
+Isso irá rodar a aplicação em https://localhost:8080
+
+**Algumas considerações**
+
+**_APP_**
+
+No arquivo [api.js](https://github.com/gusbdev/teste-mobilus/blob/main/app/src/services/api.js), precisa alterar o endereço do IP local.
+
+**_API_**
+
+No arquivo [database.js](https://github.com/gusbdev/teste-mobilus/blob/main/api/src/database/database.js), estão as configurações de conexão do banco:
+
+```
+const Sequelize = require("sequelize");
+
+const connection = new Sequelize("nome-do-banco", "usuario-do-banco", "senha-do-banco", {
+  host: "localhost",
+  dialect: "mysql",
+  timezone: "-03:00",
+});
+
+module.exports = connection;
+```
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
-- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+Para o APP
 
-...
+- [@react-native-community/geolocation](https://github.com/react-native-geolocation/react-native-geolocation) - para pegar a localização do usuário
+- [React Navigation](https://reactnavigation.org/) - responsável por gerir a navegação (Abas)
+- [Axios](https://axios-http.com/docs/intro) - realiza requisições HTTP
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) - lib para ícones
 
-Liste as tecnologias utilizadas no projeto que **não** forem reconhecidas pelo Github
+Para a API
 
-## Resolvendo Problemas :exclamation:
-
-Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento desse projeto e como foram resolvidos.
-
-## Tarefas em aberto
-
-Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementadas na sua aplicação
-
-:memo: Tarefa 1
-
-:memo: Tarefa 2
-
-:memo: Tarefa 3
+- [Express](https://expressjs.com/) - framework que lida com requisições HTTP entre outras coisas
+- [Sequelize](http://sequelize.org/) - ORM usado para mapeamento de dados
 
 ## Desenvolvedores/Contribuintes :octocat:
 
