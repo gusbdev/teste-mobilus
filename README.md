@@ -35,8 +35,7 @@ de COVID-19, do Brasil dos últimos 6 meses.
 :heavy_check_mark: Elabore uma aplicação (Web ou Mobile de acordo com a tecnologia solicitada) que
 leia o serviço solicitado na Questão 1 e calcule a média móvel de mortes por COVID-19, no Brasil,
 das duas últimas semanas, de acordo com a fórmula de média móvel, disponível em
-https://agenciabrasil.ebc.com.br/saude/noticia/2020-08/agencia-brasil-explica-media-movel-
-de-casos-de-covid-19.
+https://agenciabrasil.ebc.com.br/saude/noticia/2020-08/agencia-brasil-explica-media-movel-de-casos-de-covid-19.
 
 :heavy_check_mark: Elabore, na aplicação solicitada na Questão 2, uma tela (página) comparando e
 apresentando as médias solicitadas e faça uma listagem dos dados utilizados para o cálculo.
