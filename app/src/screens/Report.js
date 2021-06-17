@@ -12,10 +12,9 @@ import {styles} from '../Styles';
 import {allCases, reportGenerate} from '../services/cases';
 
 export default function Report() {
-  const [lastMonth, setLastMonth] = useState([]);
   const [result, setResult] = useState('');
-  const [numCases, setNumCases] = useState('1221');
-  const [numDeaths, setNumDeaths] = useState('234');
+  const [numCases, setNumCases] = useState('');
+  const [numDeaths, setNumDeaths] = useState('1221');
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
   const [watchID, setWatchID] = useState(0);
@@ -24,12 +23,28 @@ export default function Report() {
     allCases()
       .then(response => {
         if (response !== undefined) {
-          setLastMonth(
-            response.data.slice(
-              response.data.length - 32,
-              response.data.length,
-            ),
+          let all = response.data.slice(
+            response.data.length - 32,
+            response.data.length,
           );
+
+          // Max Cases in the last month
+          let cases = Math.max.apply(
+            Math,
+            all.map(function (el) {
+              return el.Confirmed;
+            }),
+          );
+          setNumCases(cases);
+
+          // Max Deaths in the last month
+          let deaths = Math.max.apply(
+            Math,
+            all.map(function (el) {
+              return el.Deaths;
+            }),
+          );
+          setNumDeaths(deaths);
         }
       })
       .catch(error => {
@@ -82,8 +97,8 @@ export default function Report() {
 
   useEffect(() => {
     callAllCases();
-
     callLocation();
+
     return () => {
       Geolocation.clearWatch(watchID);
     };
