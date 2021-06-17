@@ -67,6 +67,8 @@ Pelo terminal navegue para a pasta app e execute o comando:
 
 ```
 yarn install
+ou
+npm install
 ```
 
 Isso irá instalar as dependências da aplicação para execução no ambiente de desenvolvimento
@@ -85,6 +87,8 @@ No terminal, navegue para a basta **api** e execute o comando:
 
 ```
 yarn install
+ou
+npm install
 ```
 
 Isso irá instalar as dependências da aplicação para execução no ambiente de desenvolvimento
@@ -93,6 +97,8 @@ Depois, execute o comando:
 
 ```
 yarn start
+ou
+npm start
 ```
 
 Isso irá rodar a aplicação em https://localhost:8080
