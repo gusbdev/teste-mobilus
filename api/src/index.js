@@ -1,7 +1,6 @@
 const cors = require("cors");
 const express = require("express");
 const app = express();
-const bodyParser = require("body-parser");
 const axios = require("axios");
 const connection = require("./database/database");
 
